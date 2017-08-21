@@ -1,37 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="nl.hva.summeracademy.dustify.MainActivity">
-    
-    <LinearLayout
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:layout_height="match_parent">
 
-        <TextView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:text="emoji"
-            android:layout_margin="40dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="50sp"
-            android:background="@color/colorPrimary"/>
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="40dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:text="~ 12 µg/m³ messured"/>
-        
-        
-    </LinearLayout>
-    
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
+
+                <TextView
+                    android:id="@+id/smileyTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_margin="40dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="150sp" />
+
+
+                <TextView
+                    android:id="@+id/particleDensityTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/percentageTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/distanceTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/measurementTimeTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 </android.support.constraint.ConstraintLayout>
