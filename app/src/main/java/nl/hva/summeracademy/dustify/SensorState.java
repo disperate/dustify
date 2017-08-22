@@ -25,7 +25,7 @@ public class SensorState {
         this.sensorLocation = new Location("Location");
         this.sensorLocation.setLongitude(7.923);
         this.sensorLocation.setLatitude(41.23);
-        this.particleDensity = 10;
+        this.particleDensity = 11;
 
     }
 
