@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Location getCurrentLocation() {
+
+        //TODO create real
         LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -71,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
         if (location == null) {
-            Toast.makeText(this, "Could not get current location", Toast.LENGTH_LONG);
+            location = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
         }
 
         return location;
