@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         state = new SensorState();
 
         LocalBroadcastManager.getInstance(this).registerReceiver(updateStateReviever,
@@ -79,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
                 loadState(state.getCurrentLocation());
             }
         });
+
+        swipeContainer.setRefreshing(true);
+
     }
 
 
