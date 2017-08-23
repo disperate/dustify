@@ -17,20 +17,31 @@ public class SensorState {
     private Location currentLocation;
     private Date messurmentTime;
 
+    public SensorState() {
+    }
+
     public SensorState(Location currentLocation) {
         this.currentLocation = currentLocation;
+    }
 
-        //Todo load data
-        this.messurmentTime = new Date();
-        this.sensorLocation = new Location("Location");
-        this.sensorLocation.setLongitude(7.923);
-        this.sensorLocation.setLatitude(41.23);
-        this.particleDensity = 11;
+    public Location getCurrentLocation() {
+        return currentLocation;
+    }
 
+    public void setCurrentLocation(Location currentLocation) {
+        this.currentLocation = currentLocation;
+    }
+
+    public void setSensorLocation(Location sensorLocation) {
+        this.sensorLocation = sensorLocation;
     }
 
     public double getParticleDensity() {
         return particleDensity;
+    }
+
+    public void setParticleDensity(double particleDensity) {
+        this.particleDensity = particleDensity;
     }
 
     public String getSmilieyString() {
@@ -58,6 +69,10 @@ public class SensorState {
 
     public Date getMessurmentTime() {
         return messurmentTime;
+    }
+
+    public void setMessurmentTime(Date messurmentTime) {
+        this.messurmentTime = messurmentTime;
     }
 
     public String getDistance() {
